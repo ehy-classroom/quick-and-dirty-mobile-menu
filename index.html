@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick & Dirty Mobile Menu</title>
+
+    <style>
+    /*---------------------
+    RESET
+    ---------------------*/
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        nav ul {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .main-nav {
+            display: none;
+        }
+
+    /*---------------------
+    LAYOUT
+    ---------------------*/
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p {
+            margin-bottom: 1rem;
+        }
+
+
+        header,
+        main,
+        footer,
+        nav {
+            padding: 1rem;
+        }
+
+
+        header, section, .mobile-nav {
+            padding-top: 4rem;
+        }
+
+        section, .mobile-nav {
+            height: 100vh;
+        }
+     /*---------------------
+    NAVIGATION
+    ---------------------*/  
+    
+    .main-nav {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        background: hsla(199, 21%, 94%, 0.8);
+    }
+
+.main-nav > ul {
+display: flex;
+flex-wrap: wrap;
+gap: 1em
+}
+
+.burger-icon {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 0.3rem;
+    text-align: right;
+    font-size: 2rem;
+}
+
+.mobile-nav a {
+    display: inline-block;
+    width: 100%;
+    font-size: 2em;
+    padding: 0.3em 0;
+    border-bottom: 1px solid hsl(199, 21%, 76%);
+}
+
+
+
+    /*---------------------
+    COLOR
+    ---------------------*/
+
+        header {
+            background: hsl(199, 21%, 55%);
+        }
+
+        main {
+            background: hsl(199, 21%, 94%);
+        }
+
+        footer {
+            background: hsl(199, 21%, 21%);
+            color: #fff;
+        }
+
+
+
+        /*---------------------
+    RESPONSIVE
+    ---------------------*/   
+    
+    @media (min-width: 580px) {
+        .main-nav {
+            display: block;
+        }
+
+
+
+        .burger-icon,
+        .mobile-nav {
+            display: none;
+        }
+
+    }
+
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <h1>Willkommen</h1>
+    </header>
+    <nav class="burger-icon">
+        <a href="#mobile-nav">&#x2630;</a>
+    </nav>
+    <nav class="main-nav">
+        <ul>
+            <li><a href="#section1">Section 1</a></li>
+            <li><a href="#section2">Section 2</a></li>
+            <li><a href="#section3">Section 3</a></li>
+            <li><a href="#section4">Section 4</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="section1">
+            <h2>Section 1</h2>
+        </section>
+        <section id="section2">
+            <h2>Section 2</h2>
+        </section>
+        <section id="section3">
+            <h2>Section 3</h2>
+        </section>
+        <section id="section4">
+            <h2>Section 4</h2>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Enno Hyttrek
+        <p>
+    </footer>
+    <nav id="mobile-nav" class="mobile-nav">
+        <ul>
+            <li><a href="#">Top</a></li>
+            <li><a href="#section1">Section 1</a></li>
+            <li><a href="#section2">Section 2</a></li>
+            <li><a href="#section3">Section 3</a></li>
+            <li><a href="#section4">Section 4</a></li>
+        </ul>
+    </nav>
+</body>
+
+</html>
